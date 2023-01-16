@@ -1,18 +1,16 @@
-import './globals.css'
+import Navbar from "../components/navbar/navbar";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+import "./globals.css";
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
-      <body>{children}</body>
+      <body className="px-6 mx-auto lg:max-w-[55rem] xl:max-w-[75rem] bg-primary overflow-x-hidden">
+        <Navbar />
+
+        <div className="overflow-x-visible">{children}</div>
+      </body>
     </html>
-  )
+  );
 }
