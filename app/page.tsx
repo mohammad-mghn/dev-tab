@@ -9,7 +9,23 @@ import Redirect from "../components/redirect/redirect";
 import Testimonials from "../components/Testimonials/Testimonials";
 import SupportedWebsites from "../components/supportedWebsites/supportedWebsites";
 
-export default function Home() {
+const fetchEvents = async () => {
+  const res = await fetch(`http://localhost:3000/api/stackoverflow?topic=python&sort=MostVotes`);
+
+  const data = res.json();
+
+  console.log(data);
+
+  return data;
+};
+
+export default async function Home() {
+  // const hello = getData();
+
+  const data: any | undefined = await fetchEvents();
+
+  console.log(data);
+
   return (
     <main className="mt-[6rem]">
       <Header />
