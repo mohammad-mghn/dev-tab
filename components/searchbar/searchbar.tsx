@@ -23,7 +23,7 @@ function Searchbar() {
         <Image src={SearchIcon} alt="search icon" className="w-[1.25rem] lg:w-[1.75rem]" />
         <input
           type="text"
-          className="h-full w-full bg-transparent outline-none border-none text-[.8rem] placeholder:text-lightSecondary"
+          className="h-full w-full bg-transparent outline-none border-none text-[.8rem] lg:text-[1rem] placeholder:text-lightSecondary"
           placeholder="Search on Google"
         />
       </form>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Article from "../../components/stackoverflow/article";
+import Article from "./article";
 
 import { Question } from "../../type";
 
@@ -9,7 +9,7 @@ import StatckoverflowIcon from "../../public/icons/stackoverflow.svg";
 function Stackoverflow({ questions }: { questions: Question[] }) {
   return (
     <>
-      <div className="h-[30rem] lg:h-full w-[100%] lg:w-[30%] bg-secondary-glass rounded-lg border-glass overflow-hidden">
+      <div className="h-[30rem] lg:h-full w-full lg:w-[30%] bg-secondary-glass rounded-lg border-glass overflow-hidden">
         <header className="flex gap-x-2 items-center">
           <Image src={StatckoverflowIcon} alt="stackoverflow icon" className="w-[3.25rem]" />
 

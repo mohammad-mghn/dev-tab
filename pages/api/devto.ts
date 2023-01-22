@@ -5,9 +5,7 @@ import axios from "axios";
 // For loading Html and finding Html elements
 const cheerio = require("cheerio");
 
-type Post = {
-  [key: string]: string;
-};
+import { Post } from "../../type";
 
 type Query = {
   [key: string]: string | string[] | undefined;
@@ -44,9 +42,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           title: "",
           user: "",
           time: "",
+          tags: [""],
           comments: "",
           readTime: "",
+          timeline: "",
           reactions: "",
+          avatarImage: "",
         };
 
         // Now we get each post data
@@ -59,6 +60,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           .text()
           .replaceAll("\n", "")
           .trim();
+
+        post.timeline = $(el).find(`.crayons-article__cover > a > img`).attr("src");
+
+        post.avatarImage = $(el)
+          .find(
+            `.crayons-story__body > .crayons-story__top > .crayons-story__meta > div.crayons-story__author-pic > a.crayons-avatar > img`
+          )
+          .attr("src");
 
         post.time = $(el)
           .find(
@@ -110,10 +119,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
       // Then add other posts
       postsList.each((idx: number, el: any) => {
-        posts.push(getPostData(el));
+        const post = getPostData(el);
+
+        if (post.title) posts.push(post);
       });
 
-      // Finally, response the API to page 
+      // Finally, response the API to page
       res.status(200).json(posts);
     } catch (error) {
       res.status(500).json({ response: "An error has occurred!" });

@@ -40,6 +40,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           votes: "",
           answers: "",
           time: "",
+          link: "",
           tags: [""],
         };
 
@@ -85,6 +86,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
            a`
           )
           .text();
+
+        question.link = `https://stackoverflow.com/${$(el)
+          .find(
+            `div.s-post-summary--content >
+             h3 >
+             a`
+          )
+          .attr("href")}`;
 
         question.time = $(el)
           .find(

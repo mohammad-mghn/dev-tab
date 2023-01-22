@@ -60,12 +60,12 @@ function Bookmarks() {
   ];
 
   return (
-    <div className="mt-3 h-fit lg:h-[5.75rem] overflow-y-auto flex gap-4 flex-wrap scrollbar-dark">
+    <div className="mt-3 h-fit lg:h-[5.75rem] overflow-y-auto flex gap-4 flex-wrap justify-center lg:justify-start scrollbar-dark">
       {bookmarks.map((item, index) => (
         <Bookmark key={index} title={item.title} link={item.link} icon={item.icon} />
       ))}
 
-      <button className="w-[4rem] h-[4rem] lg:w-[5.5rem] lg:h-[5.5rem] bg-secondary-glass-full flex flex-col justify-center items-center gap-y-2 border-glass rounded-md">
+      <button className="w-[4rem] h-[4rem] lg:w-[5.5rem] lg:h-[5.5rem] bg-secondary-glass flex flex-col justify-center items-center gap-y-2 border-glass rounded-md">
         <Image src={AddIcon} alt="" className="w-8 max-h-8 lg:w-12 lg:max-h-12" />
         <h2 className="text-[.6rem] lg:text-[.75rem] text-light">Add</h2>
       </button>

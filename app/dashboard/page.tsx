@@ -1,27 +1,40 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+
+import DevTo from "../../components/devto";
+import Time from "../../components/time/time";
 import Bookmarks from "../../components/bookmarks/bookmarks";
 import Searchbar from "../../components/searchbar/searchbar";
+import Hackernews from "../../components/hackernews/hackernews";
+import Stackoverflow from "../../components/stackoverflow/stackoverflow";
 
 import NightJapan from "../../public/backgrounds/night-japan.jpg";
 
-import Time from "../../components/time/time";
-import Stackoverflow from "./stackoverflow";
+const revalidationTime = 60;
 
-const questionFetcher = async () => {
-  const response = await fetch("http://localhost:3000/api/stackoverflow", { next: { revalidate: 120 } });
+const PostsFetcher = async () => {
+  const [questionsResponse, newsResponse, postsResponse] = await Promise.all([
+    fetch(`${process.env.DB_HOST}/api/stackoverflow`, { next: { revalidate: revalidationTime } }),
+    fetch(`${process.env.DB_HOST}/api/hackernews`, { next: { revalidate: revalidationTime } }),
+    fetch(`${process.env.DB_HOST}/api/devto`, { next: { revalidate: revalidationTime } }),
+  ]);
 
-  const data = await response.json();
+  const [questions, news, posts] = await Promise.all([
+    questionsResponse.json(),
+    newsResponse.json(),
+    postsResponse.json(),
+  ]);
 
-  return data;
+  return { questions, news, posts };
 };
 
 async function Dashboard() {
-  const questions = await questionFetcher();
+  const { questions, news, posts } = await PostsFetcher();
 
   return (
-    <main className="p-4 lg:h-screen mx-auto lg:max-w-[62.5rem] xl:max-w-[95rem] flex flex-col">
-      {/* <Image src={NightJapan} alt="" className="w-screen h-screen fixed inset-0 z-[-1]" /> */}
+    <main className="p-4 lg:h-screen mx-auto md:max-w-[40rem] lg:max-w-full xl:max-w-[95rem] flex flex-col">
+      <Image src={NightJapan} alt="" className="w-screen h-screen fixed inset-0 z-[-1]" />
+
       <header className="h-fit lg:h-[10.25rem]">
         <nav className="flex items-center flex-col lg:flex-row gap-x-10 gap-y-5">
           <Time />
@@ -33,15 +46,11 @@ async function Dashboard() {
       </header>
 
       <div className="mt-3 lg:mt-3 h-[calc(100%-11.5rem)] flex justify-between flex-col lg:flex-row gap-y-3">
-        {/* <Stackoverflow questions={questions} /> */}
-        <div className="h-[30rem] lg:h-[100%] w-full lg:w-[42.5%] bg-secondary-glass-full rounded-lg border-glass"></div>
+        <Stackoverflow questions={questions} />
 
-        <div className="h-[100%] w-[25%] flex flex-col gap-y-4">
-          <div className="h-[20%] bg-secondary-glass-full rounded-lg border-glass"></div>
-          <div className="h-[20%] bg-secondary-glass-full rounded-lg border-glass"></div>
-          <div className="h-[20%] bg-secondary-glass-full rounded-lg border-glass"></div>
-          <div className="h-[20%] bg-secondary-glass-full rounded-lg border-glass"></div>
-        </div>
+        <DevTo posts={posts} />
+
+        <Hackernews news={news} />
       </div>
     </main>
   );

@@ -1,7 +1,13 @@
 import React from "react";
+
 import Comment from "./comment";
 
-import { Avatar1, Avatar2, Avatar3, Avatar4, Avatar5, Avatar6 } from "../../public/avatars";
+import Avatar1 from "../../public/avatars/Image-1.png";
+import Avatar2 from "../../public/avatars/Image-2.png";
+import Avatar3 from "../../public/avatars/Image-3.png";
+import Avatar4 from "../../public/avatars/Image-4.png";
+import Avatar5 from "../../public/avatars/Image-5.png";
+import Avatar6 from "../../public/avatars/Image-6.png";
 
 function Testimonials() {
   return (
