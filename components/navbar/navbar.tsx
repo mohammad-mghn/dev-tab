@@ -27,7 +27,12 @@ function Navbar() {
             <Link href={"/contact"}>Contact</Link>
           </li>
         </ul>
-        <button className="py-2 px-5 bg-lighter text-primary text-[0.9rem] rounded-full font-medium">DASHBOARD</button>
+        <Link
+          href={"/dashboard"}
+          className="relative py-2 px-5 z-10 bg-lighter text-primary text-[0.9rem] rounded-full font-medium cursor-pointer"
+        >
+          DASHBOARD
+        </Link>
       </div>
 
       {/* <mobile> */}
@@ -46,7 +51,12 @@ function Navbar() {
             <Link href={"/contact"}>Contact</Link>
           </li>
         </ul>
-        <button className="py-2 px-5 bg-lighter text-primary text-[0.9rem] rounded-full font-medium w-fit">DASHBOARD</button>
+        <Link
+          href={"/dashboard"}
+          className="py-2 px-5 bg-lighter text-primary text-[0.9rem] rounded-full font-medium w-fit"
+        >
+          DASHBOARD
+        </Link>
       </div>
 
       <button className="sm:hidden" onClick={toggleHandler}>

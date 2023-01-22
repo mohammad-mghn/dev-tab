@@ -10,6 +10,8 @@ module.exports = {
       lighter: "#F0F1F4",
       light: "#B8B8B8",
       dark: "#B8B8B830",
+      lightSecondary: "#86878B",
+      lightgray: "#86878B",
       ...colors,
     },
   },

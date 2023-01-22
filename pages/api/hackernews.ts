@@ -43,12 +43,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       chunk(listItems, 3).forEach((item: any) => {
         // Object holding data for each question
         const theNews: TheNews = {
-          title: "",
-          link: "",
-          user: "",
-          time: "",
-          points: "",
-          comments: "",
+          // title: "",
+          // link: "",
+          // user: "",
+          // time: "",
+          // points: "",
+          // comments: "",  
         };
 
         theNews.title = $(item[0]).find(":last-child > a").text();

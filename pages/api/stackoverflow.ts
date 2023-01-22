@@ -5,9 +5,7 @@ import axios from "axios";
 // For loading Html and finding Html elements
 const cheerio = require("cheerio");
 
-type Question = {
-  [key: string]: string;
-};
+import { Question } from "../../type";
 
 type Query = {
   [key: string]: string | string[] | undefined;
@@ -42,6 +40,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           votes: "",
           answers: "",
           time: "",
+          tags: [""],
         };
 
         // now we get question's title
@@ -96,6 +95,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
            span`
           )
           .text();
+
+        const tagsElements = $(el).find(
+          `div.s-post-summary--content >
+           .s-post-summary--meta >
+           .s-post-summary--meta-tags >
+           ul > li`
+        );
+
+        // Stores data for all tags
+        const tags: any = [];
+
+        question.tags = tagsElements.map((idx: number, el: any) => {
+          // Get Question tag text
+          const tag = $(el).find("a").text();
+
+          tags.push(tag);
+        });
+
+        question.tags = tags;
 
         questions.push(question);
       });

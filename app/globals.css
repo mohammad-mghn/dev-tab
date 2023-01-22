@@ -65,6 +65,36 @@ a {
   animation: 750ms zoom-in;
 }
 
+.border-glass {
+  border: 1px solid #28282878;
+}
+
+.bg-secondary-glass {
+  background: rgba(28, 28, 34, 0.9);
+  backdrop-filter: blur(4px);
+}
+
+.bg-secondary-glass-full {
+  backdrop-filter: blur(4px);
+  background: rgba(28, 28, 34, 0.65);
+}
+
+.threedots {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.scrollbar-dark::-webkit-scrollbar {
+  width: 8px;
+}
+.scrollbar-dark::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-dark::-webkit-scrollbar-thumb {
+  background-color: #585858;
+  border-radius: 20px;
+}
 @keyframes zoom-in {
   from {
     transform: translateY(25%);
