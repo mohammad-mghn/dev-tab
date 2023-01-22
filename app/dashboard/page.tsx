@@ -33,7 +33,7 @@ async function Dashboard() {
       </header>
 
       <div className="mt-3 lg:mt-3 h-[calc(100%-11.5rem)] flex justify-between flex-col lg:flex-row gap-y-3">
-        <Stackoverflow questions={questions} />
+        {/* <Stackoverflow questions={questions} /> */}
         <div className="h-[30rem] lg:h-[100%] w-full lg:w-[42.5%] bg-secondary-glass-full rounded-lg border-glass"></div>
 
         <div className="h-[100%] w-[25%] flex flex-col gap-y-4">
