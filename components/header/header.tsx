@@ -6,16 +6,16 @@ import Link from "next/link";
 
 function Header() {
   return (
-    <section className="p-6 lg:p-0 flex justify-between flex-col items-center gap-y-14 lg:flex-row lg:items-start overflow-visible">
-      <div className="">
-        <h1 className="text-gradient w-fit text-[2.25rem] xl:text-[3.5rem] font-bold sm:mx-auto lg:mx-0">
+    <section className="p-6 lg:p-0 flex justify-between flex-col items-center gap-y-14 lg:flex-row lg:items-center overflow-visible h-full">
+      <div className="mr-10">
+        <h1 className="text-gradient w-fit text-[2.25rem] xl:text-[2.75rem] 2xl:text-[3.5rem] font-bold sm:mx-auto lg:mx-0">
           Stay up-to-date
         </h1>
-        <h1 className="text-[2rem] xl:text-[3.5rem] font-bold sm:text-center lg:text-start">
+        <h1 className="text-[2rem] xl:text-[2.75rem] 2xl:text-[3.5rem] font-bold sm:text-center lg:text-start">
           with the latest <br />
           tech news<span className="text-gradient">.</span>
         </h1>
-        <p className="mt-5 text-light md:w-[20rem] xl:w-[30rem] leading-[2rem] sm:text-center lg:text-start">
+        <p className="mt-5 text-light md:w-[20rem] xl:w-[25rem] 2xl:[30rem] leading-[2rem] sm:text-center lg:text-start">
           WEB TAB makes it easy for you to stay up-to-date with the latest developer news, tools, jobs and events.
         </p>
         <div className="mt-[2rem] w-fit flex gap-x-5 sm:mx-auto lg:mx-0">
@@ -35,7 +35,7 @@ function Header() {
         </div>
       </div>
 
-      <div className="relative lg:max-w-[30rem] xl:max-w-[34rem]  flex items-center justify-center md:justify-end flex-1 overflow-visible ">
+      <div className="relative lg:max-w-[30rem] xl:max-w-[34rem] flex items-center justify-center md:justify-end flex-1 overflow-visible">
         <b className="bg-pink-gradient" />
         <b className="bg-orange-gradient" />
         <b className="bg-red-gradient" />
