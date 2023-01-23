@@ -11,10 +11,12 @@ import SupportedWebsites from "../components/supportedWebsites/supportedWebsites
 
 export default function Home() {
   return (
-    <div className="px-6 mx-auto lg:max-w-[55rem] 2xl:max-w-[75rem]">
-      <Navbar />
+    <div className="mx-auto lg:max-w-[55rem] 2xl:max-w-[75rem]">
+      <div className="px-6">
+        <Navbar />
+      </div>
 
-      <main className="mt-[6rem] overflow-x-visible">
+      <main className="mt-[6rem] px-6 w-full overflow-x-hidden lg:overflow-x-visible">
         <Header />
 
         <Features />
