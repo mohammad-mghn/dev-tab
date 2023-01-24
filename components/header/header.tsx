@@ -18,9 +18,9 @@ function Header() {
         <p className="mt-5 text-light md:w-[20rem] xl:w-[25rem] 2xl:[30rem] leading-[2rem] sm:text-center lg:text-start">
           WEB TAB makes it easy for you to stay up-to-date with the latest developer news, tools, jobs and events.
         </p>
-        <div className="mt-[2rem] w-fit flex gap-x-5 sm:mx-auto lg:mx-0">
+        <div className="mt-[2rem] w-full flex gap-x-5 sm:mx-auto lg:mx-0">
           <Link
-            className="px-4 sm:px-6 py-3 bg-gradient rounded-full text-primary text-[0.55rem] sm:text-[0.9rem] font-semibold sm:font-medium"
+            className="px-3 sm:px-6 py-3 bg-gradient rounded-full text-primary text-[0.55rem] sm:text-[0.9rem] font-semibold sm:font-medium"
             href="https://chrome.google.com/webstore/detail/hackertabdev-developer-ne/ocoipcahhaedjhnpoanfflhbdcpmalmp"
             target="_blank"
           >

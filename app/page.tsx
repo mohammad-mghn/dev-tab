@@ -11,16 +11,18 @@ import SupportedWebsites from "../components/supportedWebsites/supportedWebsites
 
 export default function Home() {
   return (
-    <div className="mx-auto lg:max-w-[55rem] 2xl:max-w-[75rem]">
-      <div className="px-6">
+    <main className={"overflow-x-hidden"}>
+      <div className="px-6 mx-auto lg:max-w-[55rem] 2xl:max-w-[75rem]">
         <Navbar />
       </div>
 
-      <main className="mt-[6rem] px-6 w-full overflow-x-hidden lg:overflow-x-visible">
+      <div className="mt-[6rem] px-6 w-full mx-auto lg:max-w-[55rem] 2xl:max-w-[75rem]">
         <Header />
+      </div>
 
-        <Features />
+      <Features />
 
+      <div className="mt-[6rem] px-6 w-full overflow-x-hidden lg:overflow-x-visible mx-auto lg:max-w-[55rem] 2xl:max-w-[75rem]">
         <Statuses />
 
         <SupportedWebsites />
@@ -34,7 +36,7 @@ export default function Home() {
         <Redirect />
 
         <Footer />
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }
