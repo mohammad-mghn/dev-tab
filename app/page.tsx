@@ -12,17 +12,17 @@ import SupportedWebsites from "../components/supportedWebsites/supportedWebsites
 export default function Home() {
   return (
     <main className={"overflow-x-hidden"}>
-      <div className="px-6 mx-auto lg:max-w-[55rem] 2xl:max-w-[75rem]">
+      <div className="px-6 mx-auto lg:max-w-[65rem] 2xl:max-w-[75rem]">
         <Navbar />
       </div>
 
-      <div className="mt-[6rem] px-6 w-full mx-auto lg:max-w-[55rem] 2xl:max-w-[75rem]">
+      <div className="mt-[6rem] px-6 w-full mx-auto lg:max-w-[65rem] 2xl:max-w-[75rem]">
         <Header />
       </div>
 
       <Features />
 
-      <div className="mt-[6rem] px-6 w-full overflow-x-hidden lg:overflow-x-visible mx-auto lg:max-w-[55rem] 2xl:max-w-[75rem]">
+      <div className="mt-[6rem] px-6 w-full overflow-x-hidden lg:overflow-x-visible mx-auto lg:max-w-[65rem] 2xl:max-w-[75rem]">
         <Statuses />
 
         <SupportedWebsites />
