@@ -77,11 +77,27 @@ const bookmarksDefault: bookmarkType[] = [
     icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/2491px-Twitter-logo.svg.png",
   },
 ];
+export function useLocalStorage<T>(key: string, fallbackValue: T) {
+  const [value, setValue] = useState(fallbackValue);
+  useEffect(() => {
+    const stored = localStorage.getItem(key);
+    setValue(stored ? JSON.parse(stored) : fallbackValue);
+  }, [fallbackValue, key]);
 
+  useEffect(() => {
+    localStorage.setItem(key, JSON.stringify(value));
+  }, [key, value]);
+
+  return [value, setValue] as const;
+}
 const LOCALSTORGENAME = "dev-tab__bookmarks";
 
 function Bookmarks() {
-  const savedBookmarks: any = localStorage.getItem(LOCALSTORGENAME);
+  var savedBookmarks: any = null;
+
+  if (typeof window !== "undefined") {
+    var savedBookmarks: any = localStorage.getItem(LOCALSTORGENAME);
+  }
 
   // bookmarks array
   const [bookmarks, setBookmarks] = useState(JSON.parse(savedBookmarks) ?? bookmarksDefault);
@@ -90,7 +106,9 @@ function Bookmarks() {
   const [addBookmark, setAddBookmark] = useState(false);
 
   const localStorgeHandler = (bookmarks: bookmarkType[]) => {
-    localStorage.setItem(LOCALSTORGENAME, JSON.stringify(bookmarks));
+    if (typeof window !== "undefined") {
+      localStorage.setItem(LOCALSTORGENAME, JSON.stringify(bookmarks));
+    }
   };
 
   const removeBookmarkHandler = (index: number) => {
