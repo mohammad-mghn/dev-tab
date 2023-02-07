@@ -81,7 +81,7 @@ const bookmarksDefault: bookmarkType[] = [
 const LOCALSTORGENAME = "dev-tab__bookmarks";
 
 function Bookmarks() {
-  const savedBookmarks: string | null = localStorage.getItem(LOCALSTORGENAME);
+  const savedBookmarks: any = localStorage.getItem(LOCALSTORGENAME);
 
   // bookmarks array
   const [bookmarks, setBookmarks] = useState(JSON.parse(savedBookmarks) ?? bookmarksDefault);
