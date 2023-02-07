@@ -10,20 +10,20 @@ import CommentsIcon from "../../public/icons/comments.svg";
 
 function Article({ item }: { item: Post }) {
   return (
-    <a href={item.title}>
-      <article className="p-3 border-gradient border-b-2">
-        {item.timeline && <img src={item.timeline} alt="" className="mb-4 shadow-md rounded-lg" />}
+    <a href={`https://dev.to${item.link}`} target="_blank" rel="noreferrer">
+      <article className="p-3 border-b-2 border-gradient">
+        {item.timeline && <img src={item.timeline} alt="" className="mb-4 rounded-lg shadow-md" />}
 
         <h2 className="text-lighter text-[.75rem] lg:text-[.95rem]">{item.title}</h2>
 
-        <div className="mt-2 flex items-center gap-x-2">
-          <img src={item.avatarImage} alt={item.user} className="w-7 h-7 rounded-full" />
+        <div className="flex items-center mt-2 gap-x-2">
+          <img src={item.avatarImage} alt={item.user} className="rounded-full w-7 h-7" />
 
           <h3 className="text-lightSecondary font-normal text-[.8rem]">{item.user}</h3>
         </div>
 
         {item.tags.length !== 0 && (
-          <ul className="my-3 flex items-center gap-x-1 flex-wrap h-fit lg:h-6">
+          <ul className="flex flex-wrap items-center my-3 gap-x-1 h-fit lg:h-6">
             {item.tags.map((item: string) => (
               <li
                 key={item}

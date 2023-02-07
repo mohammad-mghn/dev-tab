@@ -35,10 +35,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         "body > #page-content > #page-content-inner > .crayons-layout > #main-content > .substories > div"
       );
 
+      var link = $(
+        "body > #page-content > #page-content-inner > .crayons-layout > #main-content > #homepage-feed > div"
+      ).attr("class");
+
+      console.log(link);
+
       // Function for Extracting each post data
       const getPostData: GetPostData = (el) => {
         // Object holding data for each post
         const post: Post = {
+          link: "",
           title: "",
           user: "",
           time: "",
@@ -52,6 +59,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
         // Now we get each post data
         post.title = $(el).find(`.crayons-story__hidden-navigation-link`).text();
+
+        post.link = $(el).find(`a`).attr("href");
 
         post.user = $(el)
           .find(

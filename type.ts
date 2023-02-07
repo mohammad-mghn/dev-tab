@@ -22,6 +22,7 @@ export type Post = {
   title: string;
   user: string;
   time: string;
+  link: string;
   tags: string[];
   timeline: string;
   comments: string;
