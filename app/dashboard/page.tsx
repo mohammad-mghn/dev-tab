@@ -33,7 +33,7 @@ async function Dashboard() {
 
   return (
     <main className="p-4 lg:h-screen mx-auto md:max-w-[40rem] lg:max-w-full xl:max-w-[95rem] flex flex-col">
-      {/* <Image src={NightJapan} alt="" className="w-screen h-screen fixed inset-0 z-[-1]" /> */}
+      <Image src={NightJapan} alt="" className="w-screen h-screen fixed inset-0 z-[-1]" />
 
       <header className="h-fit lg:h-[10.25rem]">
         <nav className="flex items-center flex-col lg:flex-row gap-x-10 gap-y-5">
