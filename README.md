@@ -1,5 +1,5 @@
 <h1 align="center" id="devs-event">
-  DEV-TAB Front-end
+  DEV-TAB Front-end 👋
 </h1>
 
 <a href="https://dev-tab.vercel.app/">
