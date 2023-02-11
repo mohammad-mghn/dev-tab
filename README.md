@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center" id="devs-event">
+  DEV-TAB Front-end
+</h1>
 
-## Getting Started
+<a href="https://dev-tab.vercel.app/">
+<img src="banner.png" alt="A community for people interested in participating in programming events">
+</a>
 
-First, run the development server:
+<div align="center">
+<a href="https://dev-tab.vercel.app/">
+<img src="public/favicon.svg" alt="Logo" width="125" height="125">
+</a>
+
+<h4 align="center"><strong>A community for people interested in participating in programming events</strong></h4>
+<p align="center">
+  <a href="#tech-stack">Tech Stack</a> •
+  <a href="#roadmap">Roadmap</a> •
+  <a href="#get-started">Get Started</a> •
+  <a href="#license">License</a> •
+  <a href="#support">Support</a> •
+  <a href="#contact">Contact</a>
+</p>
+<a href="https://github.com/vito-mohagheghian/web-dev-server"><strong>Explore Back-end</strong></a> Codes
+</div>
+
+<h2 id="tech-stack">
+🤖 Tech Stack
+</h2>
+<p>
+<img src="https://github.com/tandpfun/skill-icons/blob/main/icons/React-Dark.svg" width="48" title="React.Js">  <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/NextJS-Dark.svg" width="48" title="Next.Js">   <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/TypeScript.svg" width="48" title="TypeScript">   <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/TailwindCSS-Dark.svg" width="48" title="TailWindCss">  <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Vercel-Dark.svg" width="48"  title="Vercel">  <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Figma-Dark.svg" width="48"  title="Figma">   <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Github-Dark.svg" width="48" title="Github">  <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Git.svg" width="48" title="Git">   <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Discord.svg" width="48" title="Discord">
+</p>
+
+<p align="right"><a href="#devs-event">back to top</a></p>
+
+<h2 id="roadmap">
+🛣️ Roadmap
+</h2>
+
+- [x] remove or add bookmark
+- [ ] feature to change background
+- [ ] add about page
+- [ ] slider instead of scroll in mobile view
+
+See the open [issues](https://github.com/devsEvent/frontend/issues) for a full list of proposed features (and known issues).
+
+<p align="right"><a href="#devs-event">back to top</a></p>
+
+<h2 id="get-started">
+🤖 Get Started
+</h2>
+
+download zip file, or clone it using git.
+```
+git clone https://github.com/vito-mohagheghian/dev-tab.git
+```
+
+then install dependencies using
+
+```
+npm install
+
+# or 
+
+yarn
+```
+
+
+to setup 
 
 ```bash
 npm run dev
+
 # or
+
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Now click this link [https://localhost:3000](https://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<p align="right"><a href="#devs-event">back to top</a></p>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+<h2 id="license">
+⚖️ License
+</h2>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<b>MIT License</b>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+> See LICENSE.txt for more information.
 
-## Learn More
+<p align="right"><a href="#devs-event">back to top</a></p>
 
-To learn more about Next.js, take a look at the following resources:
+<h2 id="support">
+💸 Support
+</h2>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<a href="https://coffeebede.ir/buycoffee/vitovito">
+<img src="https://img.shields.io/badge/buy_us_a_coffee-FFA84B?&style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" />
+</a>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<p align="right"><a href="#devs-event">back to top</a></p>
 
-## Deploy on Vercel
+<h2 id="contact">
+🦜 Contact
+</h2>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<a href="https://twitter.com/hereisvito" target="_blank"><img alt="Twitter" src="https://img.shields.io/badge/twitter-B16CEA.svg?&style=for-the-badge&logo=twitter&logoColor=white" /></a>   <a href="https://www.instagram.com/vito.mohagheghian/" target="_blank"><img alt="Instagram" src="https://img.shields.io/badge/Instargam-FF5E69?&style=for-the-badge&logo=instagram&logoColor=white" /></a> <a href="https://www.instagram.com/vito.mohagheghian/" target="_blank"><img alt="Instagram" src="https://img.shields.io/badge/Email-FF8A56?&style=for-the-badge&logo=gmail&logoColor=white" /></a>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p align="right"><a href="#devs-event">back to top</a></p>
