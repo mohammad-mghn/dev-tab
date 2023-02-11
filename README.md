@@ -20,7 +20,7 @@
   <a href="#support">Support</a> •
   <a href="#contact">Contact</a>
 </p>
-<a href="https://github.com/vito-mohagheghian/web-dev-server"><strong>Explore Back-end</strong></a> Codes
+<a href="https://github.com/vito-mohagheghian/web-tab-server"><strong>Explore Back-end</strong></a> Codes
 </div>
 
 <h2 id="tech-stack">
