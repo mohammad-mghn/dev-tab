@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import CodeImg from "../../public/codeImg.svg";
+import CodeImg from "../../public/codeImg.png";
 import Link from "next/link";
 
 function Header() {
