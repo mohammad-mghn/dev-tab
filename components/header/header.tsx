@@ -21,7 +21,8 @@ function Header() {
 
         <div className="mt-5 lg:mt-[2rem] w-fit sm:w-full lg:w-fit flex justify-center sm:justify-center gap-x-5">
           <Link
-            className="px-3 sm:px-6 py-3 bg-gradient rounded-full text-primary text-xs sm:text-sm font-semibold sm:font-medium"
+            className="px-3 sm:px-6 py-3 bg-gradient rounded-full text-primary text-xs sm:text-sm font-semibold sm:font-medium !leading-relaxed
+            "
             href="https://chrome.google.com/webstore/detail/hackertabdev-developer-ne/ocoipcahhaedjhnpoanfflhbdcpmalmp"
             target="_blank"
           >

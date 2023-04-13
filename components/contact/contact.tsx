@@ -37,7 +37,7 @@ function Contact() {
             className="my-4 py-3 px-7 w-full sm:w-[25rem] min-h-[8rem] max-h-[12rem] text-[0.9rem] bg-secondary placeholder:text-light placeholder:opacity-25 placeholder:text-[0.8rem] rounded-md"
           />
         </div>
-        <button className="mt-3 px-4 py-3 bg-gradient rounded-full text-lighter text-[0.9rem] font-semibold sm:font-medium">
+        <button className="mt-3 px-4 py-3 bg-gradient rounded-full text-primary text-[0.9rem] font-semibold sm:font-medium">
           SUBMIT NOW
         </button>
       </form>
