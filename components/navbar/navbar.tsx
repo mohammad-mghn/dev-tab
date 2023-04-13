@@ -14,7 +14,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="px-6 lg:px-0 relative py-6 flex items-center justify-between">
+    <nav className="md:px-6 lg:px-0 relative py-6 flex items-center justify-between">
       <h1 className="text-[1.5rem] font-medium hover:underline">
         <Link href={"/"}>DEV TAB</Link>
       </h1>
