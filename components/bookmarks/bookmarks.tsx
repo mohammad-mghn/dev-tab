@@ -12,16 +12,6 @@ type bookmarkType = {
 
 const bookmarksDefault: bookmarkType[] = [
   {
-    title: "SoundCloud",
-    link: "https://soundcloud.com/discover",
-    icon: "https://a-v2.sndcdn.com/assets/images/sc-icons/favicon-2cadd14bdb.ico",
-  },
-  {
-    title: "TailWindCSS",
-    link: "https://tailwindcss.com/",
-    icon: "https://tailwindcss.com/favicons/favicon-32x32.png?v=3",
-  },
-  {
     title: "NextJs 13",
     link: "https://nextjs.org/",
     icon: "https://nextjs.org/static/favicon/favicon-32x32.png",
@@ -32,49 +22,14 @@ const bookmarksDefault: bookmarkType[] = [
     icon: "https://cdn-icons-png.flaticon.com/512/1384/1384060.png",
   },
   {
-    title: "Instagram",
-    link: "https://www.instagram.com/",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png",
-  },
-  {
-    title: "Vercel Dash",
-    link: "https://vercel.com/dashboard",
-    icon: "https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png",
-  },
-  {
     title: "Gmail Inbox",
     link: "https://mail.google.com/mail/u/0/#inbox",
     icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png",
   },
   {
-    title: "Dev To",
-    link: "https://dev.to",
-    icon: "https://d2fltix0v2e0sb.cloudfront.net/dev-black.png",
-  },
-  {
-    title: "Figma",
-    link: "https://www.figma.com/files/recent",
-    icon: "https://cdn.icon-icons.com/icons2/3053/PNG/512/figma_macos_bigsur_icon_190183.png",
-  },
-  {
     title: "Github",
     link: "https://github.com/vito-mohagheghian",
     icon: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
-  },
-  {
-    title: "Mongo DB",
-    link: "http://mongodb.com/",
-    icon: "https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_original_logo_icon_146424.png",
-  },
-  {
-    title: "Spline",
-    link: "https://spline.design/",
-    icon: "https://june-changelog.s3.eu-central-1.amazonaws.com/spline_icon_twitter_removebg_preview_db2832210b.png",
-  },
-  {
-    title: "Twitter",
-    link: "https://twitter.com/",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/2491px-Twitter-logo.svg.png",
   },
 ];
 export function useLocalStorage<T>(key: string, fallbackValue: T) {
