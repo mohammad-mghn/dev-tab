@@ -1,12 +1,13 @@
 import React from "react";
 import Image from "next/image";
+
 import {
+  EdgeIcon,
   BraveIcon,
   ChromeIcon,
-  EdgeIcon,
-  FirefoxIcon,
   SafariIcon,
-} from "../../public/icons/browsers";
+  FirefoxIcon,
+} from "@/assets/icons/browsers";
 
 function Browsers() {
   const BrowsersIcon = [

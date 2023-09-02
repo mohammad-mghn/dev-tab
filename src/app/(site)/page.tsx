@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Metadata } from "next";
 
 import {
@@ -9,6 +10,8 @@ import {
   Testimonials,
   SupportedWebsites,
 } from "@/components";
+
+import Banner from "../../../banner.png";
 
 export const metadata: Metadata = {
   title: "DEV TAB 🚀",
@@ -22,6 +25,12 @@ export default function Home() {
   return (
     <main>
       <Header />
+
+      <Image
+        src={Banner}
+        className="mt-24 w-full scale-105"
+        alt="dev tab dashboard preview"
+      />
 
       <Statuses />
 

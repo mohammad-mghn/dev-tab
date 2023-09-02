@@ -1,19 +1,16 @@
 import React from "react";
 import Image from "next/image";
 
-import Time from "../../../components/time/time";
-import Bookmarks from "../../../components/bookmarks/bookmarks";
-import Searchbar from "../../../components/searchbar/searchbar";
+import { Time, Bookmarks, Searchbar } from "@/components";
 
-import DevToIcon from "../../../public/icons/devto.svg";
-import NightJapan from "../../../public/backgrounds/night-japan.jpg";
-import StatckoverflowIcon from "../../../public/icons/stackoverflow.svg";
+import { NightJapanBackground } from "@/assets/backgrounds";
+import { DevToIcon, StackOverFlowIcon } from "@/assets/icons";
 
 function Loading() {
   return (
     <main className="p-4 lg:h-screen mx-auto lg:max-w-[100%] xl:max-w-[95rem] flex flex-col">
       <Image
-        src={NightJapan}
+        src={NightJapanBackground}
         alt=""
         className="w-screen h-screen fixed inset-0 z-[-1]"
       />
@@ -31,7 +28,7 @@ function Loading() {
         <div className="h-[30rem] lg:h-full w-full lg:w-[30%] bg-secondary-glass rounded-lg border-glass overflow-hidden">
           <header className="flex gap-x-2 items-center">
             <Image
-              src={StatckoverflowIcon}
+              src={StackOverFlowIcon}
               alt="stackoverflow icon"
               className="w-[3.25rem]"
             />

@@ -2,8 +2,8 @@ import React from "react";
 
 type Props = {
   title: string;
-  description: string;
   value: string;
+  description: string;
 };
 
 function Status({ title, description, value }: Props) {

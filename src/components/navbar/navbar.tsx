@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import React, { useState } from "react";
 
-import Menu from "../../public/icons/menu.svg";
+import { MenuIcon } from "@/assets/icons";
 
 function Navbar() {
   const [toggle, setToggle] = useState(false);
@@ -60,7 +60,7 @@ function Navbar() {
       </div>
 
       <button className="sm:hidden" onClick={toggleHandler}>
-        <Image src={Menu} alt="menu icon" />
+        <Image src={MenuIcon} alt="menu icon" />
       </button>
       {/* </mobile> */}
     </nav>

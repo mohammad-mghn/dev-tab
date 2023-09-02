@@ -2,8 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-import GithubGradientIcon from "../../public/icons/github-gradient.svg";
-import LinkedInGradientIcon from "../../public/icons/linkedin-gradient.svg";
+import { GithubIcon, LinkedInIcon } from "@/assets/icons";
 
 function Footer() {
   return (
@@ -26,12 +25,19 @@ function Footer() {
         <p className="text-[.85rem] sm:text-[1.25rem]">©️ MIT Liecese</p>
 
         <div className="flex items-center gap-x-2">
-          <Link href="https://www.linkedin.com/in/vito-mohagheghian-5a8160214/" target="_blank">
-            <Image src={LinkedInGradientIcon} alt="" className="w-7 sm:w-9" />
+          <Link
+            href="https://www.linkedin.com/in/vito-mohagheghian-5a8160214/"
+            target="_blank"
+          >
+            <Image src={LinkedInIcon} alt="" className="w-7 sm:w-9" />
           </Link>
 
           <Link href="https://github.com/vito-mohagheghian" target="_blank">
-            <Image src={GithubGradientIcon} alt="" className="w-[2.25rem] sm:w-[2.6rem]" />
+            <Image
+              src={GithubIcon}
+              alt=""
+              className="w-[2.25rem] sm:w-[2.6rem]"
+            />
           </Link>
         </div>
       </div>

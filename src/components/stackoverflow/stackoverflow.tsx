@@ -1,10 +1,11 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+
 import Article from "./article";
 
-import { Question } from "../../types/type";
+import { StackOverFlowIcon } from "@/assets/icons";
 
-import StatckoverflowIcon from "../../public/icons/stackoverflow.svg";
+import { Question } from "@/types";
 
 function Stackoverflow({ questions }: { questions: Question[] }) {
   return (
@@ -12,7 +13,7 @@ function Stackoverflow({ questions }: { questions: Question[] }) {
       <div className="h-[30rem] lg:h-full w-full lg:w-[30%] bg-secondary-glass rounded-lg border-glass overflow-hidden">
         <header className="flex gap-x-2 items-center">
           <Image
-            src={StatckoverflowIcon}
+            src={StackOverFlowIcon}
             alt="stackoverflow icon"
             className="w-[3.25rem]"
           />

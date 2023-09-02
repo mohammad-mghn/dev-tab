@@ -1,13 +1,13 @@
-import Image, { StaticImageData } from "next/image";
 import React from "react";
+import Image, { StaticImageData } from "next/image";
 
-import StarsIcon from "../../public/stars.svg";
+import { StarsIcon } from "@/assets";
 
 type Props = {
   text: string;
-  image: StaticImageData;
   name: string;
   position: string;
+  image: StaticImageData;
 };
 
 function Comment({ text, image, name, position }: Props) {
@@ -23,7 +23,6 @@ function Comment({ text, image, name, position }: Props) {
             {name}
           </h6>
           <p className="text-light text-[0.85rem] w-[13rem] overflow-hidden whitespace-nowrap text-ellipsis">
-
             {position}
           </p>
         </div>

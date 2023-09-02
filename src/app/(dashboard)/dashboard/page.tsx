@@ -11,7 +11,7 @@ import {
   HackerNewsSection,
 } from "@/components";
 
-import NightJapan from "../../../public/backgrounds/night-japan.jpg";
+import { NightJapanBackground } from "@/assets/backgrounds";
 
 export const metadata: Metadata = {
   title: "DEV TAB • Dashboard 🔥",
@@ -51,7 +51,7 @@ async function Dashboard() {
   return (
     <main className="p-4 lg:h-screen mx-auto md:max-w-[40rem] lg:max-w-full xl:max-w-[95rem] flex flex-col">
       <Image
-        src={NightJapan}
+        src={NightJapanBackground}
         alt=""
         className="w-screen h-screen fixed inset-0 z-[-1]"
       />

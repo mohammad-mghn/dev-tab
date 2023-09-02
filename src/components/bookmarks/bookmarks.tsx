@@ -4,7 +4,7 @@ import Image from "next/image";
 import Bookmark from "./bookmark";
 import React, { useState, useEffect } from "react";
 
-import AddIcon from "../../public/icons/add.svg";
+import { AddIcon } from "@/assets/icons";
 
 type bookmarkType = {
   [key: string]: string;
@@ -55,7 +55,9 @@ function Bookmarks() {
   }
 
   // bookmarks array
-  const [bookmarks, setBookmarks] = useState(JSON.parse(savedBookmarks) ?? bookmarksDefault);
+  const [bookmarks, setBookmarks] = useState(
+    JSON.parse(savedBookmarks) ?? bookmarksDefault
+  );
 
   // Add bookmark pop-up state
   const [addBookmark, setAddBookmark] = useState(false);
@@ -139,7 +141,11 @@ function Bookmarks() {
           className="w-[4rem] h-[4rem] lg:w-[5.5rem] lg:h-[5.5rem] bg-secondary-glass flex flex-col justify-center items-center gap-y-2 border-glass rounded-md"
           onClick={AddBookmarkHandler}
         >
-          <Image src={AddIcon} alt="" className="w-8 max-h-8 lg:w-12 lg:max-h-12" />
+          <Image
+            src={AddIcon}
+            alt=""
+            className="w-8 max-h-8 lg:w-12 lg:max-h-12"
+          />
           <h2 className="text-[.6rem] lg:text-[.75rem] text-light">Add</h2>
         </button>
       </div>
@@ -191,7 +197,10 @@ function Bookmarks() {
             className="bg-secondary-glass border-glass p-[.6rem] lg:px-4 flex-1 w-full h-[3.5rem]  flex items-center rounded-lg shadow-sm placeholder:text-xs"
           />
 
-          <button className="w-full py-2 mt-2 shadow-md bg-gradient rounded-xl text-primary" type="submit">
+          <button
+            className="w-full py-2 mt-2 shadow-md bg-gradient rounded-xl text-primary"
+            type="submit"
+          >
             Add
           </button>
         </form>

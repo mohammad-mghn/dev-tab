@@ -1,12 +1,14 @@
 import React from "react";
 import Image from "next/image";
 
-import { TheNews } from "../../types/type";
+import {
+  AvatarIcon,
+  CommentsIcon,
+  TriangleIcon,
+  TriangleOutlineIcon,
+} from "@/assets/icons";
 
-import AvatarIcon from "../../public/icons/avatar.svg";
-import CommentsIcon from "../../public/icons/comments.svg";
-import TriangleIcon from "../../public/icons/triangle.svg";
-import TriangleOutlineIcon from "../../public/icons/triangle-outline.svg";
+import { TheNews } from "@/types";
 
 function HackerNews({ item }: { item: TheNews }) {
   return (

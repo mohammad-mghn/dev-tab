@@ -1,11 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-import { Question } from "../../types/type";
+import { VoteIcon, CommentsIcon, AvatarIcon } from "@/assets/icons";
 
-import VoteIcon from "../../public/icons/vote.svg";
-import CommentsIcon from "../../public/icons/comments.svg";
-import AvatarIcon from "../../public/icons/avatar.svg";
+import { Question } from "@/types";
 
 function Article({ item }: { item: Question }) {
   return (

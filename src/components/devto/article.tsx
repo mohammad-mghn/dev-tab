@@ -1,12 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-
 import Image from "next/image";
 
-import { Post } from "../../types/type";
+import { LikeIcon, CommentsIcon } from "@/assets/icons";
 
-import LikeIcon from "../../public/icons/like.svg";
-import CommentsIcon from "../../public/icons/comments.svg";
+import { Post } from "@/types";
 
 function Article({ item }: { item: Post }) {
   return (

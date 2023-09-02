@@ -1,5 +1,7 @@
 import "./globals.css";
 
+import AOSWrapper from "@/components/aos/wrapper";
+
 export default function RootLayout({
   children,
 }: {
@@ -7,7 +9,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <AOSWrapper>{children}</AOSWrapper>
+      </body>
     </html>
   );
 }

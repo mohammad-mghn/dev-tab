@@ -1,7 +1,8 @@
 import React from "react";
 
-import { TheNews } from "../../types/type";
 import HackerNews from "./article";
+
+import { TheNews } from "@/types";
 
 function HackerNewsSection({ news }: { news: TheNews[] }) {
   return (

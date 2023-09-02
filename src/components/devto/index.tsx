@@ -3,9 +3,9 @@ import Image from "next/image";
 
 import Article from "./article";
 
-import { Post } from "../../types/type";
+import { DevToIcon } from "@/assets/icons";
 
-import DevToIcon from "../../public/icons/devto.svg";
+import { Post } from "@/types";
 
 function DevTo({ posts }: { posts: Post[] }) {
   return (

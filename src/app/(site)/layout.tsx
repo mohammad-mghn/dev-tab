@@ -1,5 +1,4 @@
-import Footer from "../../components/footer/footer";
-import Navbar from "../../components/navbar/navbar";
+import { Footer, Navbar } from "@/components";
 
 export default function RootLayout({
   children,
@@ -8,7 +7,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="px-6 mx-auto lg:max-w-[75rem] 2xl:max-w-[75rem] bg-primary overflow-x-hidden">
+      <body className="px-6 lg:px-10 xl:px-6 mx-auto lg:max-w-[75rem] 2xl:max-w-[75rem] bg-primary !overflow-x-hidden">
         <Navbar />
 
         <div className="mt-24">{children}</div>

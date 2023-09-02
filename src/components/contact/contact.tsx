@@ -1,19 +1,21 @@
 import React from "react";
+
+import Input from "./input";
 import Social from "./social";
 
-import TelegramIcon from "../../public/icons/telegram.svg";
-import EmailIcon from "../../public/icons/email.svg";
-import Input from "./input";
+import { TelegramIcon, EmailIcon } from "@/assets/icons";
 
 function Contact() {
   return (
     <div className="h-[40rem] flex flex-col sm:flex-row sm:justify-between gap-y-14 ">
       <div className="">
-        <h1 className="text-gradient font-medium text-[2.5rem]">Get in touch</h1>
+        <h1 className="text-gradient font-medium text-[2.5rem]">
+          Get in touch
+        </h1>
 
         <p className="mt-2 sm:max-w-[25rem] leading-7 text-light">
-          Need a website to add ? Looking for a partner or work together ? Reach out through the form and I&apos;ll back
-          to you i the 48 hours.
+          Need a website to add ? Looking for a partner or work together ? Reach
+          out through the form and I&apos;ll back to you i the 48 hours.
         </p>
 
         <div className="mt-10 flex flex-col gap-y-3">
@@ -23,9 +25,21 @@ function Contact() {
       </div>
 
       <form className="">
-        <Input label="Your name" name="name" placeholder="e.g: Vito Mohagheghian" />
-        <Input label="Your E-mail" name="email" placeholder="e.g: vito.mohagheghian@gmail.com" />
-        <Input label="Your Subject" name="subject" placeholder="e.g: have an idea for dashboard" />
+        <Input
+          label="Your name"
+          name="name"
+          placeholder="e.g: Vito Mohagheghian"
+        />
+        <Input
+          label="Your E-mail"
+          name="email"
+          placeholder="e.g: vito.mohagheghian@gmail.com"
+        />
+        <Input
+          label="Your Subject"
+          name="subject"
+          placeholder="e.g: have an idea for dashboard"
+        />
 
         <div className="flex flex-col">
           <label htmlFor={"textarea"} className="text-light">

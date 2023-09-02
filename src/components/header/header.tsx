@@ -1,8 +1,8 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 
-import CodeImg from "../../public/codeImg.png";
-import Link from "next/link";
+import { CodeImg } from "@/assets";
 
 function Header() {
   return (
@@ -16,7 +16,8 @@ function Header() {
           tech news<span className="text-gradient">.</span>
         </h1>
         <p className="mt-2 lg:mt-5 text-sm lg:text-base text-light md:max-w-[20rem] xl:max-w-[25rem] 2xl:max-w-[30rem] !leading-loose sm:!leading-[2rem] text-center lg:text-start">
-          WEB TAB makes it easy for you to stay up-to-date with the latest developer news, tools, jobs and events.
+          WEB TAB makes it easy for you to stay up-to-date with the latest
+          developer news, tools, jobs and events.
         </p>
 
         <div className="mt-5 lg:mt-[2rem] w-fit sm:w-full lg:w-fit flex justify-center sm:justify-center gap-x-5">
@@ -37,11 +38,15 @@ function Header() {
         </div>
       </div>
 
-      <div className="relative lg:max-w-[30rem] xl:max-w-[34rem] flex items-center justify-center md:justify-end flex-1 overflow-visible">
+      <div className="xl:-mr-4 relative lg:max-w-[30rem] xl:max-w-[34rem] flex items-center justify-center md:justify-end flex-1 overflow-visible">
         <b className="bg-pink-gradient" />
         <b className="bg-orange-gradient" />
         <b className="bg-red-gradient" />
-        <Image src={CodeImg} className="w-[32.5rem] relative z-5" alt="code image" />
+        <Image
+          src={CodeImg}
+          className="w-[32.5rem] relative z-5"
+          alt="code image"
+        />
       </div>
     </section>
   );

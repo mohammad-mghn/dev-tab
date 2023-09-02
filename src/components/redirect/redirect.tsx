@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import ArrowIcon from "../../public/icons/arrow.png";
+import { ArrowIcon } from "@/assets/icons";
 
 function Redirect() {
   return (
@@ -12,7 +12,11 @@ function Redirect() {
         <Link href="/dashboard" className="mr-2">
           Let&apos;s try it on web{" "}
         </Link>
-        <Image src={ArrowIcon} alt="arrow icon" className="w-[4.25rem] h-[4.5rem] hidden sm:block" />
+        <Image
+          src={ArrowIcon}
+          alt="arrow icon"
+          className="w-[4.25rem] h-[4.5rem] hidden sm:block"
+        />
       </span>
     </div>
   );
