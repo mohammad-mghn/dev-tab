@@ -11,7 +11,7 @@ import {
   SupportedWebsites,
 } from "@/components";
 
-import Banner from "../../../banner.png";
+import Banner from "../../../public/banner.png";
 
 export const metadata: Metadata = {
   title: "DEV TAB 🚀",

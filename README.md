@@ -3,12 +3,12 @@
 </h1>
 
 <a href="https://dev-tab.vercel.app/">
-<img src="banner.png" alt="A community for people interested in participating in programming events">
+<img src="/public/banner.png" alt="A community for people interested in participating in programming events">
 </a>
 
 <div align="center">
 <a href="https://dev-tab.vercel.app/">
-<img src="public/favicon.svg" alt="Logo" width="125" height="125">
+<img src="/public/favicon.ico" alt="Logo" width="125" height="125">
 </a>
 
 <h4 align="center"><strong>A community for people interested in participating in programming events</strong></h4>
