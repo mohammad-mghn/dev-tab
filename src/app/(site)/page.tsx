@@ -28,7 +28,7 @@ export default function Home() {
 
       <Image
         src={Banner}
-        className="mt-24 w-full scale-105"
+        className="mt-28 w-full scale-105"
         alt="dev tab dashboard preview"
       />
 
