@@ -11,7 +11,7 @@ import {
   SupportedWebsites,
 } from "@/components";
 
-import Banner from "../../../banner.png";
+import Banner from "../../../public/banner.png";
 
 export const metadata: Metadata = {
   title: "DEV TAB 🚀",
@@ -28,8 +28,10 @@ export default function Home() {
 
       <Image
         src={Banner}
-        className="mt-28 w-full scale-105"
+        className="mt-10 lg:mt-28 w-full scale-105"
         alt="dev tab dashboard preview"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
       />
 
       <Statuses />

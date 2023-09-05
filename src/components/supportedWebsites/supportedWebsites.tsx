@@ -24,18 +24,31 @@ function SupportedWebsites() {
 
   return (
     <section className="my-24 sm:my-36 flex flex-col items-center text-center">
-      <h1 className="text-[1.75rem] sm:text-[2.5rem] font-medium">
+      <h1
+        className="text-[1.75rem] sm:text-[2.5rem] font-medium"
+        data-aos="zoom-in-down"
+      >
         <span className="text-gradient font-semibold">In one place,</span> Your
         favorite websites.
       </h1>
 
-      <h4 className="mt-3 text-light text-[0.75rem] sm:text-[1.1rem] font-medium">
+      <h4
+        className="mt-3 text-light text-[0.75rem] sm:text-[1.1rem] font-medium"
+        data-aos="fade-up"
+      >
         DEV TAB has everything you need to stay-to-date as developer
       </h4>
 
       <div className="mt-8 px-2 flex flex-wrap gap-x-12 gap-y-4 justify-center">
         {websitesImages.map((item, index) => (
-          <Image src={item} key={index} alt={item} className="w-12 sm:w-16" />
+          <Image
+            src={item}
+            key={index}
+            alt={item}
+            className="w-12 sm:w-16"
+            data-aos="zoom-in-left"
+            data-aos-delay={index * 100}
+          />
         ))}
       </div>
     </section>

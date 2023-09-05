@@ -4,12 +4,17 @@ import Status from "./status";
 
 type Props = {
   title: string;
+  delay?: string;
 };
 
-function StatusSection({ title }: Props) {
+function StatusSection({ title, delay }: Props) {
   return (
     <div className="flex-1">
-      <h3 className="text-gradient font-medium text-2xl lg:text-4xl w-fit">
+      <h3
+        className="text-gradient font-medium text-2xl lg:text-4xl w-fit"
+        data-aos="fade-left"
+        data-aos-delay={delay}
+      >
         {title}
       </h3>
 

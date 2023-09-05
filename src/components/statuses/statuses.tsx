@@ -7,7 +7,7 @@ function Statuses() {
     <section className="mt-16 flex justify-between gap-16 flex-col md:flex-row ">
       <StatusSection title="broswer's Extension" />
 
-      <StatusSection title="Web App" />
+      <StatusSection delay="200" title="Web App" />
     </section>
   );
 }
