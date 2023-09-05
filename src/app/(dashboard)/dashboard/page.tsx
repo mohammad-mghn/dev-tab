@@ -24,14 +24,15 @@ export const metadata: Metadata = {
 const revalidationTime = 60;
 
 const PostsFetcher = async () => {
+  console.log("asdfasdf", process.env.NEXT_PUBLIC_DB_HOST);
   const [questionsResponse, newsResponse, postsResponse] = await Promise.all([
-    fetch(`${process.env.DB_HOST}/api/stackoverflow`, {
+    fetch(`${process.env.NEXT_PUBLIC_DB_HOST}/api/stackoverflow`, {
       next: { revalidate: revalidationTime },
     }),
-    fetch(`${process.env.DB_HOST}/api/hackernews`, {
+    fetch(`${process.env.NEXT_PUBLIC_DB_HOST}/api/hackernews`, {
       next: { revalidate: revalidationTime },
     }),
-    fetch(`${process.env.DB_HOST}/api/devto`, {
+    fetch(`${process.env.NEXT_PUBLIC_DB_HOST}/api/devto`, {
       next: { revalidate: revalidationTime },
     }),
   ]);
