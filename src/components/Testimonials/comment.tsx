@@ -12,7 +12,10 @@ type Props = {
 
 function Comment({ text, image, name, position }: Props) {
   return (
-    <div className="p-5 mx-auto md:mx-0 w-[90%] md:w-[20rem] h-fit rounded-md bg-secondary">
+    <div
+      className="p-5 mx-auto md:mx-0 w-[90%] md:w-[20rem] h-fit rounded-md bg-secondary"
+      data-aos="fade-up"
+    >
       <Image src={StarsIcon} alt="5 stars" className="w-[7rem]" />
 
       <p className="mt-6 text-[.9rem] text-light">{text}</p>

@@ -14,7 +14,10 @@ import {
 function Testimonials() {
   return (
     <section className="flex items-center flex-col">
-      <h1 className="font-medium text-[1.75rem] md:text-[2.5rem] text-center">
+      <h1
+        className="font-medium text-[1.75rem] md:text-[2.5rem] text-center"
+        data-aos="zoom-in-down"
+      >
         <span className="text-gradient">Client</span> Testimonials
       </h1>
 

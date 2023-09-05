@@ -20,11 +20,17 @@ function Browsers() {
 
   return (
     <section className="my-36">
-      <h1 className="text-[2rem] sm:text-[2.5rem] font-semibold">
+      <h1
+        className="text-[2rem] sm:text-[2.5rem] font-semibold"
+        data-aos="fade-right"
+      >
         <span className="text-gradient">Try it now</span> — Free
       </h1>
 
-      <p className="mt-1 text-[1rem] sm:text-[1.25rem] font-medium text-light">
+      <p
+        className="mt-1 text-[1rem] sm:text-[1.25rem] font-medium text-light"
+        data-aos="fade-up"
+      >
         Hackertab extension is available on Chrome, Firefox, Brave and Edge
       </p>
 
@@ -33,6 +39,8 @@ function Browsers() {
           <div
             className="h-[10rem] sm:h-[14rem] w-full sm:w-[13.5rem] flex flex-col items-center justify-center bg-secondary rounded-md cursor-pointer duration-300 hover:shadow-xl"
             key={index}
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
           >
             <Image
               src={item.icon}
