@@ -17,8 +17,9 @@ function AboutPage() {
   return (
     <main>
       <h1
-        className="text-2xl sm:text-3xl md:text-5xl text-center font-medium"
-        data-aos="zoom-in-down"
+        className="text-3xl md:text-5xl text-center font-medium"
+        data-aos="fade-up"
+        data-aos-duration="1000"
       >
         <span className="text-gradient font-semibold">About</span> Developers
         <span className="text-gradient">.</span>
@@ -31,9 +32,10 @@ function AboutPage() {
           width={326}
           height={326}
           className="rounded-xl w-full sm:w-48"
+          data-aos="fade-right"
         />
 
-        <div className="p-4">
+        <div className="p-4" data-aos="fade-left">
           <h2 className="flex gap-2 items-baseline flex-wrap">
             <span className="text-gradient text-2xl font-bold">@</span>
             {"  "}
