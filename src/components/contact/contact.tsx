@@ -10,10 +10,10 @@ function Contact() {
     <div className="h-[40rem] flex flex-col sm:flex-row sm:justify-between gap-y-14 ">
       <div className="">
         <h1
-          className="text-gradient font-medium text-[2.5rem]"
+          className="font-semibold text-[2.5rem]"
           data-aos="fade-right"
         >
-          Get in touch
+          <span className="text-gradient">Get in</span> touch
         </h1>
 
         <p

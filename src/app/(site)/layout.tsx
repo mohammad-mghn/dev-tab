@@ -7,9 +7,10 @@ export default function RootLayout({
 }) {
   const layoutClassName: string =
     "px-6 lg:px-10 xl:px-6 mx-auto lg:max-w-[75rem] 2xl:max-w-[75rem]";
+
   return (
-    <html lang="en">
-      <body className="bg-primary">
+    <html lang="en" className="w-screen overflow-x-hidden">
+      <body className="bg-primary w-screen">
         <div className={layoutClassName}>
           <Navbar />
         </div>

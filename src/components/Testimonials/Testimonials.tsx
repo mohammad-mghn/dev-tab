@@ -18,7 +18,7 @@ function Testimonials() {
         className="font-medium text-[1.75rem] md:text-[2.5rem] text-center"
         data-aos="zoom-in-down"
       >
-        <span className="text-gradient">Client</span> Testimonials
+        <span className="text-gradient font-semibold">Client</span> Testimonials
       </h1>
 
       <div className="my-10 grid grid-cols-1 md:grid-cols-2 gap-6">
