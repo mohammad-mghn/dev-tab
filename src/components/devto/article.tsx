@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 
-import { LikeIcon, CommentsIcon } from "@/assets/icons";
+import { LikeIcon, CommentsIcon } from "@/constants/icons";
 
 import { Post } from "@/types";
 

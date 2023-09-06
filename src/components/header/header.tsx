@@ -2,11 +2,11 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { CodeImg } from "@/assets";
+import { CodeImg } from "@/constants";
 
 function Header() {
   return (
-    <section className="md:p-6 lg:p-0 mt-16 flex lg:justify-between flex-col items-center gap-y-14 lg:flex-row overflow-visible h-full">
+    <section className="md:p-6 lg:p-0 mt-16 flex lg:justify-between flex-col items-center gap-y-14 lg:flex-row h-full">
       <div className="lg:mr-10 flex lg:block flex-col items-center">
         <h1
           className="text-gradient w-fit text-[2.125rem] xl:text-[2.75rem] 2xl:text-5xl !leading-relaxed font-bold sm:mx-auto lg:mx-0 text-center lg:text-start"

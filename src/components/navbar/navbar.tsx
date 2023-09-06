@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
 
-import { MenuIcon } from "@/assets/icons";
+import { MenuIcon } from "@/constants/icons";
 
 function Navbar() {
   const [toggle, setToggle] = useState(false);
@@ -39,7 +39,7 @@ function Navbar() {
       <div
         className={`sm:hidden ${
           toggle
-            ? "flex justify-between flex-col gap-4 w-[calc(100%-6rem)] absolute top-[5rem] animate-zoom-in"
+            ? "flex justify-between gap-4 w-full absolute top-[5rem] animate-zoom-in"
             : "hidden"
         }`}
       >

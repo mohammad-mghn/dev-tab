@@ -5,7 +5,7 @@
 import Image from "next/image";
 import React from "react";
 
-import { BinIcon } from "@/assets/icons";
+import { BinIcon } from "@/constants/icons";
 
 type Props = {
   link: string;

@@ -7,7 +7,7 @@ import {
   ChromeIcon,
   SafariIcon,
   FirefoxIcon,
-} from "@/assets/icons/browsers";
+} from "@/constants/icons/browsers";
 
 function Browsers() {
   const BrowsersIcon = [

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import { StarIcon } from "@/assets/icons";
+import { StarIcon } from "@/constants/icons";
 
 function Feature({ title }: { title: string }) {
   return (

@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 
-import { SearchIcon, SettingsIcon } from "@/assets/icons";
+import { SearchIcon, SettingsIcon } from "@/constants/icons";
 
 function Searchbar() {
   const searchbarHandler: (e: any) => void = (e) => {

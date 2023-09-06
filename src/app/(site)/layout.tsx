@@ -5,14 +5,22 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const layoutClassName: string =
+    "px-6 lg:px-10 xl:px-6 mx-auto lg:max-w-[75rem] 2xl:max-w-[75rem]";
   return (
     <html lang="en">
-      <body className="px-6 lg:px-10 xl:px-6 mx-auto lg:max-w-[75rem] 2xl:max-w-[75rem] bg-primary !overflow-x-hidden">
-        <Navbar />
+      <body className="bg-primary">
+        <div className={layoutClassName}>
+          <Navbar />
+        </div>
 
-        <div className="mt-12">{children}</div>
+        <div className="w-screen overflow-x-hidden">
+          <div className={`mt-12 ${layoutClassName}`}>{children}</div>
+        </div>
 
-        <Footer />
+        <div className={layoutClassName}>
+          <Footer />
+        </div>
       </body>
     </html>
   );

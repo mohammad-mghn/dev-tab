@@ -3,8 +3,8 @@ import Image from "next/image";
 
 import { Time, Bookmarks, Searchbar } from "@/components";
 
-import { NightJapanBackground } from "@/assets/backgrounds";
-import { DevToIcon, StackOverFlowIcon } from "@/assets/icons";
+import { NightJapanBackground } from "@/constants/backgrounds";
+import { DevToIcon, StackOverFlowIcon } from "@/constants/icons";
 
 function Loading() {
   return (

@@ -21,13 +21,25 @@ a {
 }
 
 .text-gradient {
-  background: linear-gradient(90deg, #b16cea 14.06%, #ff5e69 44.79%, #ff8a56 71.87%, #ffa84b 100%);
+  background: linear-gradient(
+    90deg,
+    #b16cea 14.06%,
+    #ff5e69 44.79%,
+    #ff8a56 71.87%,
+    #ffa84b 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .bg-gradient {
-  background: linear-gradient(90deg, #b16cea 14.06%, #ff5e69 44.79%, #ff8a56 71.87%, #ffa84b 100%);
+  background: linear-gradient(
+    90deg,
+    #b16cea 14.06%,
+    #ff5e69 44.79%,
+    #ff8a56 71.87%,
+    #ffa84b 100%
+  );
 }
 
 .bg-red-gradient {
@@ -36,7 +48,11 @@ a {
   height: 140%;
   width: 110%;
   transform: rotate(46.98deg);
-  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 96, 104, 0.1) 0%, rgba(255, 96, 104, 0) 100%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 96, 104, 0.1) 0%,
+    rgba(255, 96, 104, 0) 100%
+  );
 }
 
 .bg-orange-gradient {
@@ -45,7 +61,11 @@ a {
   height: 140%;
   width: 100%;
   transform: rotate(42.74deg);
-  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 147, 82, 0.08) 0%, rgba(255, 147, 82, 0) 100%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 147, 82, 0.08) 0%,
+    rgba(255, 147, 82, 0) 100%
+  );
 }
 
 .bg-pink-gradient {
@@ -54,7 +74,11 @@ a {
   height: 170%;
   width: 100%;
   transform: rotate(44.24deg);
-  background: radial-gradient(50% 50% at 50% 50%, rgba(177, 108, 234, 0.15) 0%, rgba(177, 108, 234, 0) 100%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(177, 108, 234, 0.15) 0%,
+    rgba(177, 108, 234, 0) 100%
+  );
 }
 
 .bg-glass {
@@ -63,7 +87,14 @@ a {
 }
 
 .border-gradient {
-  border-image: linear-gradient(90deg, #b16cea 14.06%, #ff5e69 44.79%, #ff8a56 71.87%, #ffa84b 100%) 1;
+  border-image: linear-gradient(
+      90deg,
+      #b16cea 14.06%,
+      #ff5e69 44.79%,
+      #ff8a56 71.87%,
+      #ffa84b 100%
+    )
+    1;
 }
 
 .animate-zoom-in {
@@ -97,10 +128,12 @@ a {
 }
 @keyframes zoom-in {
   from {
-    transform: translateY(25%);
+    transform: translateX(50%);
+    opacity: 0.5;
   }
   to {
-    transform: translateY(0);
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 

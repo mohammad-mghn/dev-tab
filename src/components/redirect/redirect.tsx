@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowIcon } from "@/assets/icons";
+import { ArrowIcon } from "@/constants/icons";
 
 function Redirect() {
   return (

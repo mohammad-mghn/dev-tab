@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import { VoteIcon, CommentsIcon, AvatarIcon } from "@/assets/icons";
+import { VoteIcon, CommentsIcon, AvatarIcon } from "@/constants/icons";
 
 import { Question } from "@/types";
 

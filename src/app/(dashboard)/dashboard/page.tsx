@@ -11,7 +11,7 @@ import {
   HackerNewsSection,
 } from "@/components";
 
-import { NightJapanBackground } from "@/assets/backgrounds";
+import { NightJapanBackground } from "@/constants/backgrounds";
 
 export const metadata: Metadata = {
   title: "DEV TAB • Dashboard 🔥",

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import Article from "./article";
 
-import { DevToIcon } from "@/assets/icons";
+import { DevToIcon } from "@/constants/icons";
 
 import { Post } from "@/types";
 

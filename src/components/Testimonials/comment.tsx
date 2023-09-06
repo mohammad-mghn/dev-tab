@@ -1,7 +1,7 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 
-import { StarsIcon } from "@/assets";
+import { StarsIcon } from "@/constants";
 
 type Props = {
   text: string;

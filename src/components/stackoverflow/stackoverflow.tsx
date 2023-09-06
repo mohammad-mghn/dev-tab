@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import Article from "./article";
 
-import { StackOverFlowIcon } from "@/assets/icons";
+import { StackOverFlowIcon } from "@/constants/icons";
 
 import { Question } from "@/types";
 

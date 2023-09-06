@@ -4,7 +4,7 @@ import Image from "next/image";
 import Bookmark from "./bookmark";
 import React, { useState, useEffect } from "react";
 
-import { AddIcon } from "@/assets/icons";
+import { AddIcon } from "@/constants/icons";
 
 type bookmarkType = {
   [key: string]: string;

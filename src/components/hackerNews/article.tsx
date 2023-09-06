@@ -6,7 +6,7 @@ import {
   CommentsIcon,
   TriangleIcon,
   TriangleOutlineIcon,
-} from "@/assets/icons";
+} from "@/constants/icons";
 
 import { TheNews } from "@/types";
 

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-import { GithubIcon, LinkedInIcon } from "@/assets/icons";
+import { GithubIcon, LinkedInIcon } from "@/constants/icons";
 
 function Footer() {
   return (
@@ -22,7 +22,12 @@ function Footer() {
       </div>
 
       <div className="mt-3 flex justify-between items-center">
-        <p className="text-[.85rem] sm:text-[1.25rem]">©️ MIT Liecese</p>
+        <p className="text-[.85rem] sm:text-[1.25rem] w-2/3 sm:w-fit">
+          ©️ MIT Liecese{" "}
+          <span className="text-xs sm:text-sm opacity-80">
+            - Inspired Design from Kartik Bansal
+          </span>
+        </p>
 
         <div className="flex items-center gap-x-2">
           <Link

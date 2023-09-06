@@ -3,7 +3,7 @@ import React from "react";
 import Input from "./input";
 import Social from "./social";
 
-import { TelegramIcon, EmailIcon } from "@/assets/icons";
+import { TelegramIcon, EmailIcon } from "@/constants/icons";
 
 function Contact() {
   return (

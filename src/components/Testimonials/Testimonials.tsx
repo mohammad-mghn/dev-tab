@@ -9,7 +9,7 @@ import {
   Avatar4,
   Avatar5,
   Avatar6,
-} from "@/assets/avatars";
+} from "@/constants//avatars";
 
 function Testimonials() {
   return (

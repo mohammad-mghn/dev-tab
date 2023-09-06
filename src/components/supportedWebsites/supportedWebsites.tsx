@@ -9,7 +9,7 @@ import {
   HackerNewsIcon,
   FreeCodeCampIcon,
   StartOverFlowIcon,
-} from "../../assets/icons/websites";
+} from "../../constants/icons/websites";
 
 function SupportedWebsites() {
   const websitesImages = [
