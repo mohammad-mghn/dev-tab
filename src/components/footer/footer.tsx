@@ -25,7 +25,7 @@ function Footer() {
         <p className="text-[.85rem] sm:text-[1.25rem] w-2/3 sm:w-fit">
           ©️ MIT Liecese{" "}
           <span className="text-xs sm:text-sm opacity-80">
-            - Inspired Design from Kartik Bansal
+            - Design from Kartik Bansal with little changes
           </span>
         </p>
 
