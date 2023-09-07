@@ -29,7 +29,7 @@ function Navbar() {
         </ul>
         <Link
           href={"/dashboard"}
-          className="relative py-2 px-5 z-10 bg-lighter text-primary text-[0.9rem] rounded-full font-medium cursor-pointer"
+          className="relative py-2 px-5 z-10 bg-lighter text-primary text-[0.9rem] rounded-full font-medium hover:scale-105 transition-all duration-300 cursor-pointer"
         >
           DASHBOARD
         </Link>

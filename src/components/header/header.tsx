@@ -36,8 +36,7 @@ function Header() {
 
         <div className="mt-5 lg:mt-[2rem] w-fit sm:w-full lg:w-fit flex justify-center sm:justify-center gap-x-5">
           <Link
-            className="px-3 sm:px-6 py-3 bg-gradient rounded-full text-primary text-xs sm:text-sm font-semibold sm:font-medium !leading-relaxed
-            "
+            className="px-3 sm:px-6 py-3 bg-gradient rounded-full text-primary text-xs sm:text-sm font-semibold sm:font-medium !leading-relaxed transition-all duration-300"
             href="https://chrome.google.com/webstore/detail/hackertabdev-developer-ne/ocoipcahhaedjhnpoanfflhbdcpmalmp"
             target="_blank"
             data-aos="zoom-in-up"
@@ -46,8 +45,8 @@ function Header() {
             ADD TO CHROME
           </Link>
           <Link
-            className="px-4 sm:px-6 py-3 rounded-full text-light border-light border-2 text-xs sm:text-sm font-semibold sm:font-medium"
-            href="/dashbaord"
+            className="px-4 sm:px-6 py-3 rounded-full hover:bg-light text-light hover:text-primary border-light border-2 text-xs sm:text-sm font-semibold sm:font-medium transition-all duration-300"
+            href="/dashboard"
             data-aos="fade-left"
             data-aos-delay="700"
           >

@@ -12,12 +12,12 @@ type Props = {
   icon: string;
   index: number;
   title: string;
-  removeBookmarkhandler: any;
+  removeBookmarkHandler: any;
 };
 
-function Bookmark({ title, link, index, icon, removeBookmarkhandler }: Props) {
+function Bookmark({ title, link, index, icon, removeBookmarkHandler }: Props) {
   const removeHandler = () => {
-    removeBookmarkhandler(index);
+    removeBookmarkHandler(index);
   };
 
   return (

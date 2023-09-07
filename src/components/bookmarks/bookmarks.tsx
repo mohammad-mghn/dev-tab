@@ -133,7 +133,7 @@ function Bookmarks() {
             link={item.link}
             icon={item.icon}
             title={item.title}
-            removeBookmarkhandler={removeBookmarkHandler}
+            removeBookmarkHandler={removeBookmarkHandler}
           />
         ))}
 
