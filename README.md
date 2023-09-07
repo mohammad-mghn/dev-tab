@@ -36,9 +36,7 @@
 🛣️ Roadmap
 </h2>
 
-- [x] remove or add bookmark
 - [ ] feature to change background
-- [ ] add about page
 - [ ] slider instead of scroll in mobile view
 
 See the open [issues](https://github.com/devsEvent/frontend/issues) for a full list of proposed features (and known issues).
