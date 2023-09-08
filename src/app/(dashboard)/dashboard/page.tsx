@@ -24,7 +24,6 @@ export const metadata: Metadata = {
 const revalidationTime = 60;
 
 const PostsFetcher = async () => {
-  console.log("asdfasdf", process.env.NEXT_PUBLIC_DB_HOST);
   const [questionsResponse, newsResponse, postsResponse] = await Promise.all([
     fetch(`${process.env.NEXT_PUBLIC_DB_HOST}/api/stackoverflow`, {
       next: { revalidate: revalidationTime },
@@ -49,6 +48,7 @@ const PostsFetcher = async () => {
 async function Dashboard() {
   const { questions, news, posts } = await PostsFetcher();
 
+  console.log(posts);
   return (
     <main className="p-4 lg:h-screen mx-auto md:max-w-[40rem] lg:max-w-full xl:max-w-[95rem] flex flex-col">
       <Image

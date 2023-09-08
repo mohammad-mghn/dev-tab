@@ -17,7 +17,7 @@ function DevTo({ posts }: { posts: Post[] }) {
           className="w-[3.25rem]"
         />
 
-        <h1 className="text-lightgray text-[1rem]">Stackoverflow</h1>
+        <h1 className="text-lightgray text-[1rem]">Dev to</h1>
       </header>
 
       <div className="overflow-y-auto overflow-x-hidden h-full scrollbar-dark">

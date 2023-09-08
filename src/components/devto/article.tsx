@@ -7,12 +7,14 @@ import { LikeIcon, CommentsIcon } from "@/constants/icons";
 import { Post } from "@/types";
 
 function Article({ item }: { item: Post }) {
+  console.log(item.link);
+
   return (
-    <a href={`https://dev.to${item.link}`} target="_blank" rel="noreferrer">
+    <a href={item.link} target="_blank" rel="noreferrer">
       <article className="p-3 border-b-2 border-gradient">
-        {item.timeline && (
+        {item.thumbnail && (
           <img
-            src={item.timeline}
+            src={item.thumbnail}
             alt=""
             className="mb-4 rounded-lg shadow-md"
           />

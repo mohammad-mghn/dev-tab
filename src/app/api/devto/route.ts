@@ -1,38 +1,62 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 // For fetching Website Html
 import axios from "axios";
 // For loading Html and finding Html elements
-const cheerio = require("cheerio");
+import * as cheerio from "cheerio";
 
 import { Post } from "@/types";
 
-type Query = {
-  [key: string]: string | string[] | undefined;
-};
-
 type GetPostData = (el: any) => Post;
 
-export async function GET() {
-  //   const { topic, sort }: Query = req.query;
+export async function GET(request: NextRequest) {
+  const params: URLSearchParams = request.nextUrl.searchParams;
+
+  // moods like latest posts, top posts, and relevant posts which is default
+  const mood: string | null = params.get("mood");
+
+  // topics like TypeScript, vscode, etc
+  const topic: string | null = params.get("topic");
 
   // URL of the dev.to
-  // * sort: year , month , week , infinity
-  const url = "https://dev.to/";
+  const url: string = `https://dev.to`;
 
   try {
+    var path: string = url;
+
+    if (topic) path += `/t/${topic}`;
+
+    switch (mood) {
+      case "top":
+        const period: string | null = params.get("period");
+
+        if (period === "month" || period === "year" || period === "infinity") {
+          path += `/top/${period}`;
+          break;
+        }
+
+        path += "/top/week";
+        break;
+
+      case "latest":
+        path += "/latest";
+        break;
+    }
+
     // Fetch HTML of the page
-    const { data } = await axios.get(url);
+    const { data } = await axios.get(path);
     // Load the HTML we fetched in the previous line
-    const $ = cheerio.load(data, { ignoreWhitespace: true });
+    const $ = cheerio.load(data);
     // Select the first post which is the header
     const firstPost = $(
       "body > #page-content > #page-content-inner > .crayons-layout > #main-content > .crayons-story"
     );
+
     // Select all the list items
     const postsList = $(
-      "body > #page-content > #page-content-inner > .crayons-layout > #main-content > .substories > div"
+      topic
+        ? "body > #page-content > #page-content-inner > .home > .articles-list > .substories > div"
+        : "body > #page-content > #page-content-inner > .crayons-layout > #main-content > .substories > div"
     );
 
     // Function for Extracting each post data
@@ -46,7 +70,7 @@ export async function GET() {
         tags: [""],
         comments: "",
         readTime: "",
-        timeline: "",
+        thumbnail: "",
         reactions: "",
         avatarImage: "",
       };
@@ -62,7 +86,10 @@ export async function GET() {
         .replaceAll("\n", "")
         .trim();
 
-      post.timeline = $(el)
+      const postPath = $(el).find(".crayons-story > a").attr("href");
+      post.link = `https://dev.to/${postPath}`;
+
+      post.thumbnail = $(el)
         .find(`.crayons-article__cover > a > img`)
         .attr("src");
 
@@ -70,7 +97,7 @@ export async function GET() {
         .find(
           `.crayons-story__body > .crayons-story__top > .crayons-story__meta > div.crayons-story__author-pic > a.crayons-avatar > img`
         )
-        .attr("src");
+        .attr("src")!;
 
       post.time = $(el)
         .find(
@@ -120,10 +147,10 @@ export async function GET() {
     const posts = [];
 
     // Add the first post whch was an exception
-    posts.push(getPostData(firstPost));
+    if (!topic) posts.push(getPostData(firstPost));
 
     // Then add other posts
-    postsList.each((idx: number, el: any) => {
+    postsList.each((_, el: any) => {
       const post = getPostData(el);
 
       if (post.title) posts.push(post);
@@ -133,6 +160,9 @@ export async function GET() {
     return NextResponse.json(posts);
   } catch (error) {
     //   res.status(500).json({ response: "An error has occurred!" });
-    return NextResponse.json({ f: "d" });
+    return NextResponse.json({
+      error: "some error happened during fetching data",
+      fixSolution: "check your internet connection, or contact us",
+    });
   }
 }

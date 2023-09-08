@@ -1,12 +1,12 @@
 export type Question = {
-  title: string;
   dscr: string;
   user: string;
-  votes: string;
-  answers: string;
   time: string;
   link: string;
+  title: string;
+  votes: string;
   tags: string[];
+  answers: string;
 };
 
 export type TheNews = {
@@ -19,14 +19,14 @@ export type TheNews = {
 };
 
 export type Post = {
-  title: string;
   user: string;
   time: string;
   link: string;
+  title: string;
   tags: string[];
-  timeline: string;
   comments: string;
   readTime: string;
   reactions: string;
   avatarImage: string;
+  thumbnail: string | undefined;
 };
